@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pageTitleLabel = new System.Windows.Forms.Label();
             this.partsTableLabel = new System.Windows.Forms.Label();
             this.dgvParts = new System.Windows.Forms.DataGridView();
@@ -73,35 +73,35 @@
             // 
             // dgvParts
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvParts.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvParts.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvParts.Location = new System.Drawing.Point(69, 196);
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 82;
             this.dgvParts.RowTemplate.Height = 33;
-            this.dgvParts.Size = new System.Drawing.Size(967, 593);
+            this.dgvParts.Size = new System.Drawing.Size(1197, 593);
             this.dgvParts.TabIndex = 2;
             this.dgvParts.TabStop = false;
             // 
             // productsTableLabel
             // 
             this.productsTableLabel.AutoSize = true;
-            this.productsTableLabel.Location = new System.Drawing.Point(1113, 151);
+            this.productsTableLabel.Location = new System.Drawing.Point(1302, 151);
             this.productsTableLabel.Name = "productsTableLabel";
             this.productsTableLabel.Size = new System.Drawing.Size(97, 25);
             this.productsTableLabel.TabIndex = 3;
@@ -109,34 +109,34 @@
             // 
             // dgvProducts
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvProducts.Location = new System.Drawing.Point(1118, 196);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProducts.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvProducts.Location = new System.Drawing.Point(1307, 196);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 82;
             this.dgvProducts.RowTemplate.Height = 33;
-            this.dgvProducts.Size = new System.Drawing.Size(967, 593);
+            this.dgvProducts.Size = new System.Drawing.Size(1193, 593);
             this.dgvProducts.TabIndex = 4;
             this.dgvProducts.TabStop = false;
             // 
             // partSearchButton
             // 
-            this.partSearchButton.Location = new System.Drawing.Point(693, 145);
+            this.partSearchButton.Location = new System.Drawing.Point(937, 145);
             this.partSearchButton.Name = "partSearchButton";
             this.partSearchButton.Size = new System.Drawing.Size(122, 37);
             this.partSearchButton.TabIndex = 1;
@@ -145,7 +145,7 @@
             // 
             // productSearchButton
             // 
-            this.productSearchButton.Location = new System.Drawing.Point(1763, 145);
+            this.productSearchButton.Location = new System.Drawing.Point(2178, 145);
             this.productSearchButton.Name = "productSearchButton";
             this.productSearchButton.Size = new System.Drawing.Size(114, 37);
             this.productSearchButton.TabIndex = 6;
@@ -154,21 +154,21 @@
             // 
             // partSearchText
             // 
-            this.partSearchText.Location = new System.Drawing.Point(831, 145);
+            this.partSearchText.Location = new System.Drawing.Point(1075, 145);
             this.partSearchText.Name = "partSearchText";
             this.partSearchText.Size = new System.Drawing.Size(188, 31);
             this.partSearchText.TabIndex = 0;
             // 
             // productSearchText
             // 
-            this.productSearchText.Location = new System.Drawing.Point(1897, 145);
+            this.productSearchText.Location = new System.Drawing.Point(2312, 145);
             this.productSearchText.Name = "productSearchText";
             this.productSearchText.Size = new System.Drawing.Size(188, 31);
             this.productSearchText.TabIndex = 5;
             // 
             // partAddButton
             // 
-            this.partAddButton.Location = new System.Drawing.Point(681, 811);
+            this.partAddButton.Location = new System.Drawing.Point(912, 811);
             this.partAddButton.Name = "partAddButton";
             this.partAddButton.Size = new System.Drawing.Size(107, 51);
             this.partAddButton.TabIndex = 2;
@@ -178,7 +178,7 @@
             // 
             // partModifyButton
             // 
-            this.partModifyButton.Location = new System.Drawing.Point(806, 811);
+            this.partModifyButton.Location = new System.Drawing.Point(1037, 811);
             this.partModifyButton.Name = "partModifyButton";
             this.partModifyButton.Size = new System.Drawing.Size(107, 51);
             this.partModifyButton.TabIndex = 3;
@@ -187,7 +187,7 @@
             // 
             // partDeleteButton
             // 
-            this.partDeleteButton.Location = new System.Drawing.Point(929, 811);
+            this.partDeleteButton.Location = new System.Drawing.Point(1160, 811);
             this.partDeleteButton.Name = "partDeleteButton";
             this.partDeleteButton.Size = new System.Drawing.Size(107, 51);
             this.partDeleteButton.TabIndex = 4;
@@ -196,7 +196,7 @@
             // 
             // productDeleteButton
             // 
-            this.productDeleteButton.Location = new System.Drawing.Point(1995, 811);
+            this.productDeleteButton.Location = new System.Drawing.Point(2390, 811);
             this.productDeleteButton.Name = "productDeleteButton";
             this.productDeleteButton.Size = new System.Drawing.Size(107, 51);
             this.productDeleteButton.TabIndex = 9;
@@ -205,7 +205,7 @@
             // 
             // productModifyButton
             // 
-            this.productModifyButton.Location = new System.Drawing.Point(1872, 811);
+            this.productModifyButton.Location = new System.Drawing.Point(2267, 811);
             this.productModifyButton.Name = "productModifyButton";
             this.productModifyButton.Size = new System.Drawing.Size(107, 51);
             this.productModifyButton.TabIndex = 8;
@@ -214,7 +214,7 @@
             // 
             // productAddButton
             // 
-            this.productAddButton.Location = new System.Drawing.Point(1747, 811);
+            this.productAddButton.Location = new System.Drawing.Point(2142, 811);
             this.productAddButton.Name = "productAddButton";
             this.productAddButton.Size = new System.Drawing.Size(107, 51);
             this.productAddButton.TabIndex = 7;
@@ -224,7 +224,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(1979, 936);
+            this.exitButton.Location = new System.Drawing.Point(2374, 936);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(123, 55);
             this.exitButton.TabIndex = 10;
@@ -236,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2153, 1052);
+            this.ClientSize = new System.Drawing.Size(2556, 1052);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.productDeleteButton);
             this.Controls.Add(this.productModifyButton);
