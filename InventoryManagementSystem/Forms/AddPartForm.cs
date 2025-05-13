@@ -72,7 +72,7 @@ namespace InventoryManagementSystem.Forms
                 newPart = new InHouse
                 {
                     PartID = GenerateUniquePartID(),
-                    Name = partNameLabel.Text,
+                    Name = partNameTextBox.Text,
                     InStock = inventory,
                     Price = price,
                     Max = max,
@@ -85,7 +85,7 @@ namespace InventoryManagementSystem.Forms
                 newPart = new OutSourced
                 {
                     PartID = GenerateUniquePartID(),
-                    Name = partNameLabel.Text,
+                    Name = partNameTextBox.Text,
                     InStock = inventory,
                     Price = price,
                     Max = max,
