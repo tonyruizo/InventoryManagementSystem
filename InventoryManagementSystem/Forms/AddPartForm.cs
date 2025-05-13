@@ -21,7 +21,7 @@ namespace InventoryManagementSystem.Forms
             }
             else
             {
-                partDynamicLabel.Text = "Company ID";
+                partDynamicLabel.Text = "Company Name";
             }
         }
 
