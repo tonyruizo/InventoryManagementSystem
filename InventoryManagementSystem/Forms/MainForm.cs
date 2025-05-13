@@ -1,4 +1,5 @@
 ﻿using InventoryManagementSystem.Forms;
+using InventoryManagementSystem.Models;
 using System.Windows.Forms;
 
 namespace InventoryManagementSystem
@@ -9,20 +10,31 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
             pageTitleLabel.Text = "Inventory Management System";
+            dgvParts.DataSource = Inventory.AllParts;
+            dgvProducts.DataSource = Inventory.Products;
+
         }
 
         // Parts
         private void PartAddButton_Click(object sender, System.EventArgs e)
         {
             AddPartForm addPartForm = new AddPartForm();
-            addPartForm.ShowDialog();
+            if (addPartForm.ShowDialog() == DialogResult.OK)
+            {
+                dgvParts.DataSource = null;
+                dgvParts.DataSource = Inventory.AllParts;
+            }
         }
 
         // Products
         private void ProductAddButton_Click(object sender, System.EventArgs e)
         {
             AddProductForm addProductForm = new AddProductForm();
-            addProductForm.ShowDialog();
+            if (addProductForm.ShowDialog() == DialogResult.OK)
+            {
+                dgvProducts.DataSource = null;
+                dgvProducts.DataSource = Inventory.Products;
+            }
         }
 
         // Exit
