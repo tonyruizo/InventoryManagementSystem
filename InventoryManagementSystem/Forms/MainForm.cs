@@ -13,6 +13,9 @@ namespace InventoryManagementSystem
             dgvParts.DataSource = Inventory.AllParts;
             dgvProducts.DataSource = Inventory.Products;
 
+            dgvParts.ReadOnly = true;
+            dgvProducts.ReadOnly = true;
+
         }
 
         // Parts
