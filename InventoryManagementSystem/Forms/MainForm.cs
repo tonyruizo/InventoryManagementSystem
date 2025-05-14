@@ -29,6 +29,23 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void PartModifyButton_Click(object sender, System.EventArgs e)
+        {
+            if (dgvParts.CurrentRow?.DataBoundItem is Part selectedPart)
+            {
+                ModifyPartForm modifyForm = new ModifyPartForm(selectedPart);
+                if (modifyForm.ShowDialog() == DialogResult.OK)
+                {
+                    dgvParts.DataSource = null;
+                    dgvParts.DataSource = Inventory.AllParts;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a part to modify.");
+            }
+        }
+
         // Products
         private void ProductAddButton_Click(object sender, System.EventArgs e)
         {
