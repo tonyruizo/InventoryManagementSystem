@@ -12,6 +12,7 @@ namespace InventoryManagementSystem
             pageTitleLabel.Text = "Inventory Management System";
             dgvParts.DataSource = Inventory.AllParts;
             dgvProducts.DataSource = Inventory.Products;
+            dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
 
             dgvParts.ReadOnly = true;
             dgvProducts.ReadOnly = true;
@@ -26,6 +27,7 @@ namespace InventoryManagementSystem
             {
                 dgvParts.DataSource = null;
                 dgvParts.DataSource = Inventory.AllParts;
+                dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
             }
         }
 
@@ -53,6 +55,7 @@ namespace InventoryManagementSystem
             if (addProductForm.ShowDialog() == DialogResult.OK)
             {
                 dgvProducts.DataSource = null;
+                dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 dgvProducts.DataSource = Inventory.Products;
             }
         }
