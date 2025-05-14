@@ -15,9 +15,9 @@ namespace InventoryManagementSystem.Forms
             this.Load += ModifyPartForm_Load;
         }
 
+        // Populate fields with existing data on form load
         private void ModifyPartForm_Load(object sender, System.EventArgs e)
         {
-            // Populate fields with existing data
             partIDTextBox.Text = selectedPart.PartID.ToString();
             partIDTextBox.Enabled = false;
 
@@ -41,6 +41,7 @@ namespace InventoryManagementSystem.Forms
             }
         }
 
+        // Handle dyanmic label (in-house = Machine ID /outsourced = Comapany ID)
         private void HouseRadioButton_CheckedChanged(object sender, System.EventArgs e)
         {
             if (houseRadioButton.Checked)
@@ -53,8 +54,10 @@ namespace InventoryManagementSystem.Forms
             }
         }
 
+        // Save
         private void PartSaveButton_Click(object sender, System.EventArgs e)
         {
+            // Validation
             if (!int.TryParse(partInventoryTextBox.Text, out int inventory) ||
                 !decimal.TryParse(partPriceTextBox.Text, out decimal price) ||
                 !int.TryParse(partMinTextBox.Text, out int min) ||
@@ -76,6 +79,7 @@ namespace InventoryManagementSystem.Forms
                 return;
             }
 
+            // Update the existing part
             Part updatedPart;
             if (houseRadioButton.Checked)
             {
@@ -119,6 +123,7 @@ namespace InventoryManagementSystem.Forms
             this.Close();
         }
 
+        // Cancel
         private void CancelButton_Click(object sender, System.EventArgs e)
         {
             this.Close();
