@@ -6,10 +6,13 @@ namespace InventoryManagementSystem.Forms
 {
     public partial class AddPartForm : Form
     {
+        private int generatedID;
+
         public AddPartForm()
         {
             InitializeComponent();
             pageTitleLabel.Text = "Add Part";
+            this.Load += AddPartForm_Load;
         }
 
         // Handle dyanmic label (in-house = Machine ID /outsourced = Comapany ID)
@@ -34,6 +37,13 @@ namespace InventoryManagementSystem.Forms
             return Inventory.AllParts.Count > 0 ? Inventory.AllParts.Max(p => p.PartID) + 1 : 1;
         }
 
+        // Generate new PartID on form load
+        private void AddPartForm_Load(object sender, System.EventArgs e)
+        {
+            generatedID = GenerateUniquePartID();
+            partIDTextBox.Text = generatedID.ToString();
+            partIDTextBox.Enabled = false;
+        }
 
         // Save
         private void PartSaveButton_Click(object sender, System.EventArgs e)
@@ -71,7 +81,7 @@ namespace InventoryManagementSystem.Forms
                 }
                 newPart = new InHouse
                 {
-                    PartID = GenerateUniquePartID(),
+                    PartID = generatedID,
                     Name = partNameTextBox.Text,
                     InStock = inventory,
                     Price = price,
@@ -84,7 +94,7 @@ namespace InventoryManagementSystem.Forms
             {
                 newPart = new OutSourced
                 {
-                    PartID = GenerateUniquePartID(),
+                    PartID = generatedID,
                     Name = partNameTextBox.Text,
                     InStock = inventory,
                     Price = price,
