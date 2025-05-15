@@ -5,7 +5,7 @@ namespace InventoryManagementSystem.Forms
 {
     public partial class ModifyPartForm : Form
     {
-        private Part selectedPart;
+        private readonly Part selectedPart;
 
         public ModifyPartForm(Part partToEdit)
         {
@@ -113,11 +113,7 @@ namespace InventoryManagementSystem.Forms
                 };
             }
 
-            int index = Inventory.AllParts.IndexOf(selectedPart);
-            if (index >= 0)
-            {
-                Inventory.AllParts[index] = updatedPart;
-            }
+            Inventory.UpdatePart(selectedPart.PartID, updatedPart);
 
             this.DialogResult = DialogResult.OK;
             this.Close();
