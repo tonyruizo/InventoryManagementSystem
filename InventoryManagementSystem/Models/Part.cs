@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a part in the inventory.
     /// </summary>
-    public class Part
+    public abstract class Part
     {
         public int PartID { get; set; }
         public string Name { get; set; }
