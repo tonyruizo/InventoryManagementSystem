@@ -1,5 +1,6 @@
 ﻿using InventoryManagementSystem.Forms;
 using InventoryManagementSystem.Models;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,12 +15,51 @@ namespace InventoryManagementSystem
             dgvParts.DataSource = Inventory.AllParts;
             dgvProducts.DataSource = Inventory.Products;
             dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
+            dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
 
             dgvParts.ReadOnly = true;
             dgvProducts.ReadOnly = true;
             dgvParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvParts.MultiSelect = false;
 
+            LoadTestData();
+
+        }
+
+        // Data for testing
+        private void LoadTestData()
+        {
+            Inventory.AddPart(new InHouse
+            {
+                PartID = 1,
+                Name = "Plywood",
+                InStock = 10,
+                Price = 39.99m,
+                Min = 1,
+                Max = 20,
+                MachineID = 23
+            });
+
+            Inventory.AddPart(new OutSourced
+            {
+                PartID = 2,
+                Name = "Tape",
+                InStock = 5,
+                Price = 5.18m,
+                Min = 1,
+                Max = 10,
+                CompanyName = "Home Depot"
+            });
+
+            Inventory.AddProduct(new Product
+            {
+                ProductID = 1,
+                Name = "Glue",
+                InStock = 2,
+                Price = 1.99m,
+                Min = 1,
+                Max = 5
+            });
         }
 
         // Parts
@@ -48,6 +88,48 @@ namespace InventoryManagementSystem
             else
             {
                 MessageBox.Show("Please select a part to modify.");
+            }
+        }
+
+        private void PartSearchButton_Click(object sender, System.EventArgs e)
+        {
+            string searchedPart = partSearchText.Text.Trim().ToLower();
+            bool isPart = false;
+
+            // Show all parts if field is empty
+            if (string.IsNullOrWhiteSpace(searchedPart))
+            {
+                dgvParts.DataSource = null;
+                dgvParts.DataSource = Inventory.AllParts;
+                return;
+            }
+
+            // Search by ID
+            if (int.TryParse(searchedPart, out int partId))
+            {
+                var match = Inventory.AllParts.FirstOrDefault(p => p.PartID == partId);
+                if (match != null)
+                {
+                    dgvParts.DataSource = new BindingList<Part> { match };
+                    isPart = true;
+                }
+            }
+            else
+            {
+                // Search by Name
+                var match = Inventory.AllParts.Where(p => p.Name.ToLower().Contains(searchedPart)).ToList();
+                if (match.Any())
+                {
+                    dgvParts.DataSource = new BindingList<Part>(match);
+                    isPart = true;
+                }
+            }
+
+            if (!isPart)
+            {
+                MessageBox.Show("Part not found.");
+                dgvParts.DataSource = null;
+                dgvParts.DataSource = Inventory.AllParts;
             }
         }
 

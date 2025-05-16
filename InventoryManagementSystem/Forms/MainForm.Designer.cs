@@ -142,6 +142,7 @@
             this.partSearchButton.TabIndex = 1;
             this.partSearchButton.Text = "Search";
             this.partSearchButton.UseVisualStyleBackColor = true;
+            this.partSearchButton.Click += new System.EventHandler(this.PartSearchButton_Click);
             // 
             // productSearchButton
             // 
