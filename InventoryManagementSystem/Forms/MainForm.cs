@@ -19,8 +19,11 @@ namespace InventoryManagementSystem
 
             dgvParts.ReadOnly = true;
             dgvProducts.ReadOnly = true;
+
             dgvParts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvParts.MultiSelect = false;
+            dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProducts.MultiSelect = false;
 
             LoadTestData();
 
@@ -181,6 +184,48 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void ProductSearchButton_Click(object sender, System.EventArgs e)
+        {
+            string searchedProduct = productSearchText.Text.Trim().ToLower();
+            bool isProduct = false;
+
+            // Show all products if field is empty
+            if (string.IsNullOrWhiteSpace(searchedProduct))
+            {
+                dgvProducts.DataSource = null;
+                dgvProducts.DataSource = Inventory.Products;
+                return;
+            }
+
+            // Search by ID
+            if (int.TryParse(searchedProduct, out int productId))
+            {
+                var match = Inventory.Products.FirstOrDefault(p => p.ProductID == productId);
+                if (match != null)
+                {
+                    dgvProducts.DataSource = new BindingList<Product> { match };
+                    isProduct = true;
+                }
+            }
+            else
+            {
+                // Search by Name
+                var match = Inventory.Products.Where(p => p.Name.ToLower().Contains(searchedProduct)).ToList();
+                if (match.Any())
+                {
+                    dgvProducts.DataSource = new BindingList<Product>(match);
+                    isProduct = true;
+                }
+            }
+
+            if (!isProduct)
+            {
+                MessageBox.Show("Product not found.");
+                dgvProducts.DataSource = null;
+                dgvProducts.DataSource = Inventory.Products;
+            }
+
+        }
 
 
         // Exit

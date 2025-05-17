@@ -38,7 +38,7 @@
             this.productsTableLabel = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.partSearchButton = new System.Windows.Forms.Button();
-            this.productSearchButton = new System.Windows.Forms.Button();
+            this.ProductSearchButton = new System.Windows.Forms.Button();
             this.partSearchText = new System.Windows.Forms.TextBox();
             this.productSearchText = new System.Windows.Forms.TextBox();
             this.partAddButton = new System.Windows.Forms.Button();
@@ -144,14 +144,15 @@
             this.partSearchButton.UseVisualStyleBackColor = true;
             this.partSearchButton.Click += new System.EventHandler(this.PartSearchButton_Click);
             // 
-            // productSearchButton
+            // ProductSearchButton
             // 
-            this.productSearchButton.Location = new System.Drawing.Point(2178, 145);
-            this.productSearchButton.Name = "productSearchButton";
-            this.productSearchButton.Size = new System.Drawing.Size(114, 37);
-            this.productSearchButton.TabIndex = 6;
-            this.productSearchButton.Text = "Search";
-            this.productSearchButton.UseVisualStyleBackColor = true;
+            this.ProductSearchButton.Location = new System.Drawing.Point(2178, 145);
+            this.ProductSearchButton.Name = "ProductSearchButton";
+            this.ProductSearchButton.Size = new System.Drawing.Size(114, 37);
+            this.ProductSearchButton.TabIndex = 6;
+            this.ProductSearchButton.Text = "Search";
+            this.ProductSearchButton.UseVisualStyleBackColor = true;
+            this.ProductSearchButton.Click += new System.EventHandler(this.ProductSearchButton_Click);
             // 
             // partSearchText
             // 
@@ -249,7 +250,7 @@
             this.Controls.Add(this.partAddButton);
             this.Controls.Add(this.productSearchText);
             this.Controls.Add(this.partSearchText);
-            this.Controls.Add(this.productSearchButton);
+            this.Controls.Add(this.ProductSearchButton);
             this.Controls.Add(this.partSearchButton);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.productsTableLabel);
@@ -273,7 +274,7 @@
         private System.Windows.Forms.Label productsTableLabel;
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Button partSearchButton;
-        private System.Windows.Forms.Button productSearchButton;
+        private System.Windows.Forms.Button ProductSearchButton;
         private System.Windows.Forms.TextBox partSearchText;
         private System.Windows.Forms.TextBox productSearchText;
         private System.Windows.Forms.Button partAddButton;
