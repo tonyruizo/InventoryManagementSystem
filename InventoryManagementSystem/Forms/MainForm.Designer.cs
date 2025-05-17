@@ -44,7 +44,7 @@
             this.partAddButton = new System.Windows.Forms.Button();
             this.partModifyButton = new System.Windows.Forms.Button();
             this.partDeleteButton = new System.Windows.Forms.Button();
-            this.productDeleteButton = new System.Windows.Forms.Button();
+            this.ProductDeleteButton = new System.Windows.Forms.Button();
             this.productModifyButton = new System.Windows.Forms.Button();
             this.productAddButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
@@ -198,14 +198,15 @@
             this.partDeleteButton.UseVisualStyleBackColor = true;
             this.partDeleteButton.Click += new System.EventHandler(this.PartDeleteButton_Click);
             // 
-            // productDeleteButton
+            // ProductDeleteButton
             // 
-            this.productDeleteButton.Location = new System.Drawing.Point(2390, 811);
-            this.productDeleteButton.Name = "productDeleteButton";
-            this.productDeleteButton.Size = new System.Drawing.Size(107, 51);
-            this.productDeleteButton.TabIndex = 9;
-            this.productDeleteButton.Text = "Delete";
-            this.productDeleteButton.UseVisualStyleBackColor = true;
+            this.ProductDeleteButton.Location = new System.Drawing.Point(2390, 811);
+            this.ProductDeleteButton.Name = "ProductDeleteButton";
+            this.ProductDeleteButton.Size = new System.Drawing.Size(107, 51);
+            this.ProductDeleteButton.TabIndex = 9;
+            this.ProductDeleteButton.Text = "Delete";
+            this.ProductDeleteButton.UseVisualStyleBackColor = true;
+            this.ProductDeleteButton.Click += new System.EventHandler(this.ProductDeleteButton_Click);
             // 
             // productModifyButton
             // 
@@ -242,7 +243,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2556, 1052);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.productDeleteButton);
+            this.Controls.Add(this.ProductDeleteButton);
             this.Controls.Add(this.productModifyButton);
             this.Controls.Add(this.productAddButton);
             this.Controls.Add(this.partDeleteButton);
@@ -280,7 +281,7 @@
         private System.Windows.Forms.Button partAddButton;
         private System.Windows.Forms.Button partModifyButton;
         private System.Windows.Forms.Button partDeleteButton;
-        private System.Windows.Forms.Button productDeleteButton;
+        private System.Windows.Forms.Button ProductDeleteButton;
         private System.Windows.Forms.Button productModifyButton;
         private System.Windows.Forms.Button productAddButton;
         private System.Windows.Forms.Button exitButton;

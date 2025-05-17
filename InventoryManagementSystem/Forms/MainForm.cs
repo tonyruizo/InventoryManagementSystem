@@ -54,6 +54,17 @@ namespace InventoryManagementSystem
                 CompanyName = "Home Depot"
             });
 
+            Inventory.AddPart(new InHouse
+            {
+                PartID = 3,
+                Name = "Hammer",
+                InStock = 10,
+                Price = 9.99m,
+                Min = 1,
+                Max = 20,
+                MachineID = 20
+            });
+
             Inventory.AddProduct(new Product
             {
                 ProductID = 1,
@@ -62,6 +73,16 @@ namespace InventoryManagementSystem
                 Price = 1.99m,
                 Min = 1,
                 Max = 5
+            });
+
+            Inventory.AddProduct(new Product
+            {
+                ProductID = 2,
+                Name = "100 Nails Box",
+                InStock = 6,
+                Price = 8.99m,
+                Min = 1,
+                Max = 10
             });
         }
 
@@ -110,7 +131,7 @@ namespace InventoryManagementSystem
             // Search by ID
             if (int.TryParse(searchedPart, out int partId))
             {
-                var match = Inventory.AllParts.FirstOrDefault(p => p.PartID == partId);
+                var match = Inventory.LookupPart(partId);
                 if (match != null)
                 {
                     dgvParts.DataSource = new BindingList<Part> { match };
@@ -200,7 +221,7 @@ namespace InventoryManagementSystem
             // Search by ID
             if (int.TryParse(searchedProduct, out int productId))
             {
-                var match = Inventory.Products.FirstOrDefault(p => p.ProductID == productId);
+                var match = Inventory.LookupProduct(productId);
                 if (match != null)
                 {
                     dgvProducts.DataSource = new BindingList<Product> { match };
@@ -225,6 +246,38 @@ namespace InventoryManagementSystem
                 dgvProducts.DataSource = Inventory.Products;
             }
 
+        }
+
+        private void ProductDeleteButton_Click(object sender, System.EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count == 0 || dgvProducts.SelectedRows[0].IsNewRow)
+            {
+                MessageBox.Show("Please select a product to delete.");
+                return;
+            }
+
+            if (dgvProducts.CurrentRow?.DataBoundItem is Product selectedProduct)
+            {
+                if (selectedProduct.AssociatedParts.Any())
+                {
+                    MessageBox.Show("This product cannot be deleted because it has an associated part.");
+                    return;
+                }
+
+                var confirmResult = MessageBox.Show(
+                    "Are you sure you want to delete this product?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    Inventory.RemoveProduct(selectedProduct.ProductID);
+                    dgvProducts.DataSource = null;
+                    dgvProducts.DataSource = Inventory.Products;
+                    MessageBox.Show("Product deleted.");
+                }
+            }
         }
 
 
