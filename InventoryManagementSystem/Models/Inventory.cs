@@ -30,6 +30,11 @@ namespace InventoryManagementSystem.Models
             return AllParts.Remove(part);
         }
 
+        /// <summary>
+        /// Find and return a given part.
+        /// </summary>
+        /// <param name="partId">The part ID to be searched.</param>
+        /// <returns>The part found in the inventory.</returns>
         public static Part LookupPart(int partId)
         {
             return AllParts.FirstOrDefault(p => p.PartID == partId);
@@ -76,7 +81,7 @@ namespace InventoryManagementSystem.Models
         /// </summary>
         /// <param name="productId">The ID of the product to return.</param>
         /// <returns>The product found in the inventory.</returns>
-        public Product LookupProduct(int productId)
+        public static Product LookupProduct(int productId)
         {
             return Products.FirstOrDefault(p => p.ProductID == productId);
         }
