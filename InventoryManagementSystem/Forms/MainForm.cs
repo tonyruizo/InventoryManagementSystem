@@ -111,6 +111,7 @@ namespace InventoryManagementSystem
                 {
                     dgvParts.DataSource = null;
                     dgvParts.DataSource = Inventory.AllParts;
+                    dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 }
             }
             else
@@ -204,8 +205,8 @@ namespace InventoryManagementSystem
             if (addProductForm.ShowDialog() == DialogResult.OK)
             {
                 dgvProducts.DataSource = null;
-                dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 dgvProducts.DataSource = Inventory.Products;
+                dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
             }
         }
 
@@ -300,6 +301,7 @@ namespace InventoryManagementSystem
                 {
                     dgvProducts.DataSource = null;
                     dgvProducts.DataSource = Inventory.Products;
+                    dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 }
             }
         }
