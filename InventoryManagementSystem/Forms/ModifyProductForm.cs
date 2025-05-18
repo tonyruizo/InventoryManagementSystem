@@ -49,6 +49,48 @@ namespace InventoryManagementSystem.Forms
             productMaxTextBox.Text = originalProduct.Max.ToString();
         }
 
+        private void PartSearchButton_Click(object sender, System.EventArgs e)
+        {
+            string searchedPart = partSearchText.Text.Trim().ToLower();
+            bool isPart = false;
+
+            // Show all parts if field is empty
+            if (string.IsNullOrWhiteSpace(searchedPart))
+            {
+                dgvParts.DataSource = null;
+                dgvParts.DataSource = Inventory.AllParts;
+                return;
+            }
+
+            // Search by ID
+            if (int.TryParse(searchedPart, out int partId))
+            {
+                var match = Inventory.AllParts.FirstOrDefault(p => p.PartID == partId);
+                if (match != null)
+                {
+                    dgvParts.DataSource = new BindingList<Part> { match };
+                    isPart = true;
+                }
+            }
+            else
+            {
+                // Search by Name
+                var match = Inventory.AllParts.Where(p => p.Name.ToLower().Contains(searchedPart)).ToList();
+                if (match.Any())
+                {
+                    dgvParts.DataSource = new BindingList<Part>(match);
+                    isPart = true;
+                }
+            }
+
+            if (!isPart)
+            {
+                MessageBox.Show("Part not found.");
+                dgvParts.DataSource = null;
+                dgvParts.DataSource = Inventory.AllParts;
+            }
+        }
+
         private void AddButton_Click(object sender, System.EventArgs e)
         {
             if (dgvParts.CurrentRow?.DataBoundItem is Part selectedPart &&
