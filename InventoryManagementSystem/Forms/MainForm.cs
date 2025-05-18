@@ -130,6 +130,7 @@ namespace InventoryManagementSystem
             {
                 dgvParts.DataSource = null;
                 dgvParts.DataSource = Inventory.AllParts;
+                dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 return;
             }
 
@@ -159,6 +160,7 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Part not found.");
                 dgvParts.DataSource = null;
                 dgvParts.DataSource = Inventory.AllParts;
+                dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
             }
         }
 
@@ -192,6 +194,7 @@ namespace InventoryManagementSystem
                     Inventory.DeletePart(selectedPart);
                     dgvParts.DataSource = null;
                     dgvParts.DataSource = Inventory.AllParts;
+                    dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
                     MessageBox.Show("Part deleted.");
                 }
             }
@@ -220,6 +223,7 @@ namespace InventoryManagementSystem
             {
                 dgvProducts.DataSource = null;
                 dgvProducts.DataSource = Inventory.Products;
+                dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
                 return;
             }
 
@@ -249,6 +253,7 @@ namespace InventoryManagementSystem
                 MessageBox.Show("Product not found.");
                 dgvProducts.DataSource = null;
                 dgvProducts.DataSource = Inventory.Products;
+                dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
             }
 
         }
@@ -280,6 +285,7 @@ namespace InventoryManagementSystem
                     Inventory.RemoveProduct(selectedProduct.ProductID);
                     dgvProducts.DataSource = null;
                     dgvProducts.DataSource = Inventory.Products;
+                    dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
                     MessageBox.Show("Product deleted.");
                 }
             }
