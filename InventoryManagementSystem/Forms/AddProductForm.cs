@@ -1,5 +1,6 @@
 ﻿using InventoryManagementSystem.Models;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace InventoryManagementSystem.Forms
         {
             InitializeComponent();
             pageTitleLabel.Text = "Add Product";
+            this.Size = new Size(1100, 600);
 
             dgvParts.DataSource = Inventory.AllParts;
             dgvAssociatedParts.DataSource = associatedParts;

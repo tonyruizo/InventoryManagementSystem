@@ -61,7 +61,7 @@
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(1396, 916);
+            this.SaveButton.Location = new System.Drawing.Point(1555, 916);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(129, 50);
             this.SaveButton.TabIndex = 69;
@@ -71,7 +71,7 @@
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(1549, 916);
+            this.DeleteButton.Location = new System.Drawing.Point(1708, 916);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(129, 50);
             this.DeleteButton.TabIndex = 68;
@@ -81,7 +81,7 @@
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(1695, 418);
+            this.AddButton.Location = new System.Drawing.Point(1855, 421);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(129, 50);
             this.AddButton.TabIndex = 67;
@@ -130,7 +130,7 @@
             this.dgvAssociatedParts.Name = "dgvAssociatedParts";
             this.dgvAssociatedParts.RowHeadersWidth = 82;
             this.dgvAssociatedParts.RowTemplate.Height = 33;
-            this.dgvAssociatedParts.Size = new System.Drawing.Size(1197, 319);
+            this.dgvAssociatedParts.Size = new System.Drawing.Size(1357, 319);
             this.dgvAssociatedParts.TabIndex = 64;
             this.dgvAssociatedParts.TabStop = false;
             // 
@@ -157,20 +157,20 @@
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 82;
             this.dgvParts.RowTemplate.Height = 33;
-            this.dgvParts.Size = new System.Drawing.Size(1197, 319);
+            this.dgvParts.Size = new System.Drawing.Size(1357, 319);
             this.dgvParts.TabIndex = 63;
             this.dgvParts.TabStop = false;
             // 
             // partSearchText
             // 
-            this.partSearchText.Location = new System.Drawing.Point(1427, 29);
+            this.partSearchText.Location = new System.Drawing.Point(1607, 29);
             this.partSearchText.Name = "partSearchText";
             this.partSearchText.Size = new System.Drawing.Size(378, 31);
             this.partSearchText.TabIndex = 61;
             // 
             // PartSearchButton
             // 
-            this.PartSearchButton.Location = new System.Drawing.Point(1299, 26);
+            this.PartSearchButton.Location = new System.Drawing.Point(1479, 26);
             this.PartSearchButton.Name = "PartSearchButton";
             this.PartSearchButton.Size = new System.Drawing.Size(122, 37);
             this.PartSearchButton.TabIndex = 62;
@@ -276,7 +276,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(1701, 911);
+            this.CancelButton.Location = new System.Drawing.Point(1860, 911);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(123, 55);
             this.CancelButton.TabIndex = 48;
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1877, 1012);
+            this.ClientSize = new System.Drawing.Size(2144, 1012);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);

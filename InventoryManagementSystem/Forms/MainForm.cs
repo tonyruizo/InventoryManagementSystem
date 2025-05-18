@@ -1,6 +1,7 @@
 ﻿using InventoryManagementSystem.Forms;
 using InventoryManagementSystem.Models;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -12,8 +13,11 @@ namespace InventoryManagementSystem
         {
             InitializeComponent();
             pageTitleLabel.Text = "Inventory Management System";
+            this.Size = new Size(1300, 600);
+
             dgvParts.DataSource = Inventory.AllParts;
             dgvProducts.DataSource = Inventory.Products;
+
             dgvParts.Columns["Price"].DefaultCellStyle.Format = "F2";
             dgvProducts.Columns["Price"].DefaultCellStyle.Format = "F2";
 
