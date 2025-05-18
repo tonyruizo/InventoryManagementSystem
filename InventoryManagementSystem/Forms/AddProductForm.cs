@@ -159,7 +159,7 @@ namespace InventoryManagementSystem.Forms
         {
             if (dgvAssociatedParts.CurrentRow?.DataBoundItem is Part selectedPart)
             {
-                var result = MessageBox.Show("Are you sure you want to delete this part?", "Confirm", MessageBoxButtons.YesNo);
+                var result = MessageBox.Show("Are you sure you want to delete this associated part?", "Confirm", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     associatedParts.Remove(selectedPart);
@@ -167,7 +167,7 @@ namespace InventoryManagementSystem.Forms
             }
             else
             {
-                MessageBox.Show("Select a part to delete.");
+                MessageBox.Show("Select an associated part to delete.");
             }
         }
 
