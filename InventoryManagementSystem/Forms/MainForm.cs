@@ -280,6 +280,25 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void ProductModifyButton_Click(object sender, System.EventArgs e)
+        {
+            if (dgvProducts.SelectedRows.Count == 0 || dgvProducts.SelectedRows[0].IsNewRow)
+            {
+                MessageBox.Show("Please select a product to modify.");
+                return;
+            }
+
+            if (dgvProducts.CurrentRow?.DataBoundItem is Product selectedProduct)
+            {
+                ModifyProductForm modifyForm = new ModifyProductForm(selectedProduct);
+
+                if (modifyForm.ShowDialog() == DialogResult.OK)
+                {
+                    dgvProducts.DataSource = null;
+                    dgvProducts.DataSource = Inventory.Products;
+                }
+            }
+        }
 
         // Exit
         private void ExitButton_Click(object sender, System.EventArgs e)
