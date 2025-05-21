@@ -24,6 +24,7 @@ This application was developed with **Visual Studio 2022** on a **Windows 11 (Vi
 - **WinForms .NET Framework (4.7.2)**
 - **Windows Forms Designer**
 - Object-Oriented Programming (OOP)
+- Language Integrated Query (LINQ)
 - Data Binding with `BindingList<T>`
 
 
