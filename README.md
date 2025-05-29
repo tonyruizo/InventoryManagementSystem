@@ -8,13 +8,17 @@ This application was developed for a **school project** with **Visual Studio 202
 
 ## Features
 
+- Object-Oriented Programming (OOP)
+- Language Integrated Query (LINQ)
+- Data Binding with `BindingList<T>`
+- Fully dynamic UI with `DataGridView` controls
+- Input validation
+
+#### In App Features:
 - Add, modify, delete, and search for **Parts** and **Products**
 - Associate parts with products
-- Input validation (Min ≤ Max, Inventory within range, numeric only, etc.)
 - Confirmation dialogs for deletions
 - Live search by ID or name
-- Fully dynamic UI with `DataGridView` controls
-- Uses polymorphism and encapsulated logic in a structured model
 
 <br>
 
@@ -23,9 +27,6 @@ This application was developed for a **school project** with **Visual Studio 202
 - **C#**
 - **WinForms .NET Framework (4.7.2)**
 - **Windows Forms Designer**
-- Object-Oriented Programming (OOP)
-- Language Integrated Query (LINQ)
-- Data Binding with `BindingList<T>`
 
 
 <br>
