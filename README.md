@@ -2,8 +2,15 @@
 
 This is a desktop inventory management application built with **C# and Windows Forms**. It allows users to manage parts and products with full **CRUD functionality**, search, and validation.
 
-**Note:**
+#### Scenario:
+A small manufacturing organization has outgrown its current paper-based inventory system and is in need for a Windows desktop application. 
+
+#### Note:
 This application was developed for a **school project** with **Visual Studio 2022** on a **Windows 11 (Virtual Machine)** using **Parallels Desktop** on a **Macbook**.
+<br>
+
+#### Technologies Used:
+- **C#**, **WinForms .NET Framework (4.7.2)**, and **Windows Forms Designer**. 
 <br>
 
 ## Features
@@ -19,15 +26,6 @@ This application was developed for a **school project** with **Visual Studio 202
 - Associate parts with products
 - Confirmation dialogs for deletions
 - Live search by ID or name
-
-<br>
-
-## Technologies
-
-- **C#**
-- **WinForms .NET Framework (4.7.2)**
-- **Windows Forms Designer**
-
 
 <br>
 
